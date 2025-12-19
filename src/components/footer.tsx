@@ -22,8 +22,8 @@ export default function IGMAFooter() {
             </div>
           </div>
 
-          {/* Middle: Links grid */}
-          <div className="w-full lg:w-1/3 grid grid-cols-3 gap-6">
+          {/* Middle: Links grid - now takes up 2/3 of the width */}
+          <div className="w-full lg:w-2/3 grid grid-cols-3 gap-6">
             <div>
               <h4 className="text-sm font-semibold text-gray-200 mb-4">Navigation</h4>
               <ul className="space-y-2 text-sm text-gray-400">
@@ -67,34 +67,6 @@ export default function IGMAFooter() {
                   <Link href="/contact" className="hover:text-white">WhatsApp</Link>
                 </li>
               </ul>
-            </div>
-          </div>
-
-          {/* Right: Get the app buttons */}
-          <div className="w-full lg:w-1/3 flex flex-col items-start lg:items-end justify-between">
-            <div className="w-full max-w-xs">
-              <h4 className="text-sm font-semibold text-gray-200 mb-4">Get the app</h4>
-              <div className="flex flex-col gap-3">
-                <button className="flex items-center gap-3 border border-gray-700 px-4 py-2 rounded-lg text-sm bg-transparent">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="4" width="18" height="16" rx="3" stroke="#cbd5e1" />
-                    <path d="M7 8h10" stroke="#cbd5e1" strokeWidth="1.2" />
-                  </svg>
-                  <span>Windows</span>
-                </button>
-
-                <button className="flex items-center gap-3 border border-gray-700 px-4 py-2 rounded-lg text-sm bg-transparent">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="10" stroke="#cbd5e1" />
-                    <path d="M9 8c1 1.5 3 1.5 4 0" stroke="#cbd5e1" strokeWidth="1.2" />
-                  </svg>
-                  <span>macOS</span>
-                </button>
-              </div>
-            </div>
-
-            <div className="mt-8 lg:mt-0 text-sm text-gray-500 w-full lg:w-auto"> 
-              <div className="hidden lg:block">&nbsp;</div>
             </div>
           </div>
         </div>

@@ -85,7 +85,7 @@ const items: Item[] = [
   },
 ];
 
-export default function VisualHighlights() {
+export default function VisualHighlights({ radiusPercent = "3%" }: { radiusPercent?: string }) {
   return (
     <section className="mx-auto max-w-7xl px-6 py-16">
       <div className="max-w-2xl">
@@ -95,7 +95,11 @@ export default function VisualHighlights() {
 
       <div className="mt-8 columns-1 sm:columns-2 lg:columns-3 gap-6">
         {items.map((item) => (
-          <div key={item.id} className="mb-6 break-inside-avoid rounded-xl bg-[#0e0e0e] shadow-md">
+          <div
+            key={item.id}
+            className="mb-6 break-inside-avoid bg-[#0e0e0e] shadow-md overflow-hidden"
+            style={{ borderRadius: radiusPercent }}
+          >
             <div className="relative">
               <Image
                 src={item.src}

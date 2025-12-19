@@ -38,12 +38,12 @@ export default function ContentSection() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 pb-16 sm:pb-20">
-        <div className="w-full">
+        <div className="w-full flex flex-col items-center">
           <h2 className="text-3xl font-bold text-foreground">Most popular</h2>
           <p className="mt-3 mb-8 max-w-xl text-sm text-white/70 sm:mb-10">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2 auto-rows-[1fr]">
+          <div className="grid grid-cols-1 md:grid-cols-2 place-items-center w-full max-w-6xl mx-auto">
             {[
               {
                 img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
@@ -76,7 +76,7 @@ export default function ContentSection() {
                 date: "10.27.2025",
               },
             ].map((card, index) => (
-              <div key={index} className="flex h-full w-full max-w-md mx-auto flex-col">
+              <div key={index} className="flex h-full w-[380px] max-w-full flex-col text-left">
                 <div className="relative w-full aspect-[16/9] overflow-hidden rounded-xl">
                   <img
                     src={card.img}
@@ -84,7 +84,7 @@ export default function ContentSection() {
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <span className="mt-4 inline-flex w-fit self-start rounded-md bg-[#e6fff0] px-3 py-1 text-xs font-semibold text-black">
+                <span className="mt-4 inline-flex w-fit self-start rounded-full bg-[#f1f9f7] px-4 py-1 text-xs font-semibold text-[#16a085]">
                   {card.date}
                 </span>
                 <h3 className="mt-3 text-xl font-bold leading-snug text-foreground line-clamp-2">

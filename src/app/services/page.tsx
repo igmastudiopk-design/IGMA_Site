@@ -20,7 +20,7 @@ export default function Services() {
     <div className="bg-[#000000] min-h-screen w-full">
       <section className="mx-auto max-w-7xl px-6 py-16 text-center">
       <h2 className="mt-18 text-4xl md:text-5xl font-bold">Services</h2>
-      <p className="mx-auto mt-7 max-w-3xl text-sm md:text-base text-white/80">
+      <p className="mx-auto mt-7 max-w-xl text-sm md:text-base text-white/80">
         IGMA blends strategy, storytelling, and performance to help brands capture attention and convert it into measurable growth.
       </p>
 
@@ -32,7 +32,7 @@ export default function Services() {
             <Button
               key={t.key}
               label={t.label}
-              variant={isActive ? "primary" : "outline"}
+              variant={isActive ? "gradient" : "outline"}
               className={`${isActive ? "" : "border-emerald-500 hover:bg-white/10"} px-6 py-2`}
               onClick={() => setActive(t.key)}
             />

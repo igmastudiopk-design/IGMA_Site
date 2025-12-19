@@ -88,60 +88,62 @@ export default function TestimonialCarousel() {
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <div className="w-full flex items-center justify-center py-16 px-4" style={{ backgroundColor: "#0a0a0a" }}>
-      <div className="w-full max-w-4xl">
-        {/* Testimonial Card */}
+    <div className="w-full min-h-screen flex items-center justify-center py-8 px-4" style={{ backgroundColor: "#0a0a0a" }}>
+      <div className="w-full flex flex-col items-center justify-center">
+        {/* Testimonial Card - Added more top padding */}
         <div
-          className="rounded-3xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-start"
+          className="rounded-3xl flex flex-col md:flex-row gap-6 md:gap-8 w-[80%] min-h-[300px] md:min-h-[340px]"
           style={{ backgroundImage: "linear-gradient(to right, #172419, #145540)" }}
         >
-          {/* Profile Image */}
-          <div className="flex-shrink-0">
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden border-2 border-teal-500">
+          {/* Profile Image - Increased top padding */}
+          <div className="flex-shrink-0 pt-10 pl-8 md:pt-22 md:pl-10">
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden border-2 border-teal-500">
               <Image
                 src={currentTestimonial.image || "/placeholder.svg"}
                 alt={currentTestimonial.author}
-                width={128}
-                height={128}
+                width={80}
+                height={80}
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
 
-          {/* Content */}
-          <div className="flex-1">
-            {/* Quote */}
-            <p className="text-white text-lg leading-relaxed mb-6">{currentTestimonial.quote}</p>
+          {/* Content - Increased top padding to match */}
+          <div className="flex-1 pr-8 pb-8 pt-22 md:pr-10 md:pb-10 md:pt-22">
+            {/* Quote - Smaller text size */}
+            <p className="text-white text-sm md:text-base leading-relaxed mb-6">
+              {currentTestimonial.quote}
+            </p>
 
-            {/* Author Info */}
-            <div className="flex items-center gap-3">
+            {/* Author Info - Smaller text */}
+            <div className="flex items-center gap-3 mb-3">
               <div>
-                <h3 className="text-white font-semibold text-base">{currentTestimonial.author}</h3>
-                <p className="text-teal-200 text-sm">{currentTestimonial.title}</p>
+                <h3 className="text-white font-medium text-xs md:text-sm">{currentTestimonial.author}</h3>
+                <p className="text-teal-200 text-xs mt-0.5">{currentTestimonial.title}</p>
               </div>
             </div>
 
-            {/* Discord Icon */}
-            <div className="mt-4 flex items-center gap-2">
-              <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                <svg viewBox="0 0 24 24" className="w-3 h-3 text-teal-800" fill="currentColor">
+            {/* Discord Icon - Smaller */}
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
+                <svg viewBox="0 0 24 24" className="w-2.5 h-2.5 text-teal-800" fill="currentColor">
                   <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.211.375-.445.864-.607 1.25a18.27 18.27 0 0 0-5.487 0c-.163-.386-.396-.875-.607-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.08.08 0 0 0 .087-.027c.461-.63.87-1.295 1.216-1.994a.077.077 0 0 0-.042-.107 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1 .008-.128 10.7 10.7 0 0 0 .372-.294.075.075 0 0 1 .078-.01c3.927 1.793 8.18 1.793 12.062 0a.075.075 0 0 1 .079.009c.5-4.761-.838-8.898-3.549-12.571a.06.06 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-.965-2.157-2.156 0-1.193.956-2.157 2.157-2.157 1.201 0 2.169.964 2.157 2.157 0 1.19-.956 2.156-2.157 2.156zm7.975 0c-1.183 0-2.157-.965-2.157-2.156 0-1.193.955-2.157 2.157-2.157 1.201 0 2.169.964 2.157 2.157 0 1.19-.956 2.156-2.157 2.156z" />
                 </svg>
               </div>
-              <span className="text-white text-sm font-medium">DISCORD</span>
+              <span className="text-white text-xs font-medium">DISCORD</span>
             </div>
           </div>
         </div>
 
-        {/* Navigation Dots and Arrows */}
-        <div className="flex items-center justify-center gap-4 mt-8">
+        {/* Navigation Dots and Arrows - Reduced spacing */}
+        <div className="flex items-center justify-center gap-4 mt-10">
           {/* Left Arrow */}
           <button
             onClick={goToPrevious}
             className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
             aria-label="Previous testimonial"
           >
-            <ChevronLeft className="w-6 h-6 text-white" />
+            <ChevronLeft className="w-5 h-5 text-white" />
           </button>
 
           {/* Dots */}
@@ -150,7 +152,7 @@ export default function TestimonialCarousel() {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                className={`w-2 h-2 rounded-full transition-colors ${
                   index === currentIndex ? "bg-teal-500" : "bg-gray-600"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
@@ -164,7 +166,7 @@ export default function TestimonialCarousel() {
             className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
             aria-label="Next testimonial"
           >
-            <ChevronRight className="w-6 h-6 text-white" />
+            <ChevronRight className="w-5 h-5 text-white" />
           </button>
         </div>
       </div>

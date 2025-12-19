@@ -21,7 +21,7 @@ export default function CTA() {
             BOOK A 20‑MINUTE DISCOVERY CALL. WE&apos;LL REVIEW GOALS, CONSTRAINTS, AND OUTLINE A PLAN.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
-            <Button href="/book-call" label="Schedule a Call" variant="primary" />
+            <Button href="/book-call" label="Schedule a Call" variant="gradient" />
             <Button
               href="/contact"
               label="Chat on WhatsApp"

@@ -20,10 +20,10 @@ export default function HowWeWork() {
           </div>
         </div>
 
-        {/* Bottom row: aligned cards */}
-        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
+        {/* Bottom row */}
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-10">
           {/* 920 stats card */}
-          <div className="relative w-full">
+          <div className="relative w-full lg:col-span-3">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-slate-800 via-slate-900 to-black opacity-75 blur-xl" />
             <div className="relative h-80 w-full overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800/60 to-slate-900/60 p-8 backdrop-blur-sm">
               <div className="flex items-baseline gap-1">
@@ -66,7 +66,7 @@ export default function HowWeWork() {
           </div>
 
           {/* Video card */}
-          <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl lg:col-span-7">
             <img
               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop"
               alt="How We Work"
