@@ -45,7 +45,7 @@ export default function ServicesSection() {
           <div className="rounded-xl overflow-hidden">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
               <Image
-                src="https://images.unsplash.com/photo-1485827405657-1f62236eb5aa?q=80&w=1600&auto=format&fit=crop"
+                src="/main/services-content.jpg"
                 alt="Video editing studio"
                 fill
                 className="object-cover"

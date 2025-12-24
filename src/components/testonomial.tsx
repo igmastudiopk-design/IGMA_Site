@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
   {
     id: 1,
     quote:
-      "Working with IGMA has been a game-changer for our business. Their team blends strategic digital marketing with high-quality content production that truly connects with audiences. Our online engagement and conversions have grown significantly since partnering with them.",
+      "We wanted performance, not just visuals. IGMA blends flawless product photography with a skilled digital strategy. Our product page conversion rate increased dramatically, proving that quality drives sales.",
     author: "Amelia Micheal",
     title: "Media Executive, Buying & Control",
     company: "discord",
@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
   {
     id: 2,
     quote:
-      "The level of expertise and dedication demonstrated by IGMA is unmatched. They took our vision and transformed it into a comprehensive digital strategy that exceeded all our expectations. Our brand visibility has tripled in just six months.",
+      "IGMA is the best company for social media growth. Their team merges viral Reels content with a smart engagement strategy. Since partnering with them, our organic followers and engagement have increased significantly.",
     author: "James Richardson",
     title: "Chief Marketing Officer, Tech Solutions",
     company: "discord",

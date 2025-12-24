@@ -66,7 +66,7 @@ export default function Services() {
           <div className="rounded-xl overflow-hidden">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
               <Image
-                src="https://images.unsplash.com/photo-1485827405657-1f62236eb5aa?q=80&w=1600&auto=format&fit=crop"
+                src="/main/services.jpg"
                 alt="Video editing studio"
                 fill
                 className="object-cover"
@@ -80,25 +80,25 @@ export default function Services() {
             <ServiceCard
               color="bg-orange-500"
               title="Reels"
-              desc="Viral Potential, High Engagement, Dynamic Storytelling."
+              desc="Scroll-stopping videos that capture attention and drive engagement."
               icon={FaVideo}
             />
             <ServiceCard
               color="bg-sky-500"
               title="Product Photography"
-              desc="Stunning Visuals, Increased Sales, Premium Branding."
+              desc="Irresistible, captivating visuals that drive increased sales."
               icon={FaCamera}
             />
             <ServiceCard
               color="bg-pink-500"
               title="Brand Films"
-              desc="Emotional Connection, Compelling Narrative, Brand Loyalty."
+              desc="Compelling narratives that make your brand come to life on screen."
               icon={FaFilm}
             />
             <ServiceCard
               color="bg-violet-500"
               title="Studio Services"
-              desc="Professional Quality, Creative Control, Efficient Production."
+              desc="Full-service studio solutions for flawless shoots, every time."
               icon={FaTools}
             />
           </div>

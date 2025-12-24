@@ -6,7 +6,7 @@ export default function CTA() {
     <section className="relative py-20">
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1553484771-088a86cf63d7?q=80&w=1920&auto=format&fit=crop"
+          src="/main/cta.jpg"
           alt="Studio background"
           fill
           className="object-cover brightness-50"

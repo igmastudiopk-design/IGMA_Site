@@ -1,5 +1,6 @@
 import React from "react";
 import CTA from "@/components/cta";
+import Image from "next/image";
 
 export default function ContentSection() {
   return (
@@ -12,25 +13,35 @@ export default function ContentSection() {
                 Why Great Content Fails <br /> Without Strategy
               </h2>
               <p className="text-sm leading-relaxed text-white/70">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <div className="flex items-center gap-3 pt-4">
-                <img
-                  src="https://i.pravatar.cc/40"
+                <Image
+                  src="/portfolio.jpg"
                   alt="author"
-                  className="h-10 w-10 rounded-full border border-white/20"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 rounded-full border border-white/20 object-cover"
                 />
                 <div className="flex flex-col text-sm text-white/70">
-                  <span className="font-medium text-foreground">Kensington ABZ</span>
+                  <span className="font-medium text-foreground">
+                    Kensington ABZ
+                  </span>
                   <span className="text-xs">Oct 19, 2025</span>
                 </div>
               </div>
             </div>
             <div className="flex-1">
-              <img
-                src="/58123bec-628f-402e-bec0-2721e878cdcb.png"
+              <Image
+                src="/portfolio.jpg"
                 alt="content"
+                width={600}
+                height={400}
                 className="h-auto w-full rounded-xl object-cover"
+                priority
               />
             </div>
           </div>
@@ -41,12 +52,13 @@ export default function ContentSection() {
         <div className="w-full flex flex-col items-center">
           <h2 className="text-3xl font-bold text-foreground">Most popular</h2>
           <p className="mt-3 mb-8 max-w-xl text-sm text-white/70 sm:mb-10">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 place-items-center w-full max-w-6xl mx-auto">
             {[
               {
-                img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+                img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
                 title: "How to Create Reels That Actually Convert",
                 date: "10.19.2025",
               },
@@ -76,7 +88,10 @@ export default function ContentSection() {
                 date: "10.27.2025",
               },
             ].map((card, index) => (
-              <div key={index} className="flex h-full w-[380px] max-w-full flex-col text-left">
+              <div
+                key={index}
+                className="flex h-full w-[380px] max-w-full flex-col text-left"
+              >
                 <div className="relative w-full aspect-[16/9] overflow-hidden rounded-xl">
                   <img
                     src={card.img}
@@ -91,7 +106,8 @@ export default function ContentSection() {
                   {card.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-white/70 line-clamp-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
               </div>
             ))}

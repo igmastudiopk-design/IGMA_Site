@@ -32,7 +32,7 @@ export default function Faqs() {
         {/* Left: Title + subtitle + actions */}
         <div>
           <h2 className="text-3xl font-bold text-foreground">IGMA FAQs</h2>
-          <p className="mt-2 text-sm text-white/70">Here’s Everything You’ve Been Wondering About IGMA.</p>
+          <p className="mt-2 text-sm text-white/70">Your Questions, Answered. Our Expertise, Unveiled.</p>
           <div className="mt-6 flex items-center gap-6">
             <button className="rounded-full border border-white/30 px-4 py-2 text-xs text-white/90 hover:bg-white/10">More Questions</button>
             <a href="#contact" className="text-sm text-white/80 hover:text-white">Contact Us</a>

@@ -6,7 +6,7 @@ export default function TrustedBy() {
     },
     {
       name: "Evernote",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Evernote_Logo.svg",
+      logo: "https://images.unsplash.com/photo-1587502537046-c70620057994?q=80&w=1600&auto=format&fit=crop",
     },
     {
       name: "Google",
@@ -18,7 +18,7 @@ export default function TrustedBy() {
     },
     {
       name: "Coinbase",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/3/37/Coinbase_logo.svg",
+      logo: "https://images.unsplash.com/photo-1640340434855-6f60b58902a6?q=80&w=1600&auto=format&fit=crop",
     },
     {
       name: "Tesla",

@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1920&auto=format&fit=crop"
+          src="/main/hero.jpg"
           alt="Team meeting in studio"
           fill
           priority
@@ -20,12 +20,11 @@ export default function Hero() {
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-6">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
-            <span className="block text-emerald-400">We design,</span>
-            <span className="block text-white">produce and scale</span>
-            <span className="block text-white">brand <span className="text-emerald-400">experience.</span></span>
+            <span className="block text-emerald-400">We generate ideas,</span>
+            <span className="block text-white">you generate impact.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/80">
-            Strategy-led design and production to launch, grow and refresh with impact
+            We create visuals that captivate, connect, and convert.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Button href="/book-call" label="Book a Call" variant="gradient" />

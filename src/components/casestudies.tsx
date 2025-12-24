@@ -5,27 +5,27 @@ export default function CaseStudies() {
   const items = [
     {
       title: "Fintech Rebrand & Site",
-      img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop",
+      img: "/case-study/case (1).jpg",
       tags: ["+50% SIGN UP RATES", "A/B WIN"],
     },
     {
       title: "D2C Launch Campaign",
-      img: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1600&auto=format&fit=crop",
+      img: "/case-study/case (2).jpg",
       tags: ["+50% SIGN UP RATES", "A/B WIN"],
     },
     {
       title: "SaaS Demand Gen",
-      img: "https://images.unsplash.com/photo-1596486521730-1e2c3a59d4f6?q=80&w=1600&auto=format&fit=crop",
+      img: "/case-study/case (3).jpg",
       tags: ["+50% SIGN UP RATES", "A/B WIN"],
     },
     {
       title: "Social Ads Sprint",
-      img: "https://images.unsplash.com/photo-1581094794329-4c2a0c1c2ba1?q=80&w=1600&auto=format&fit=crop",
+      img: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80",
       tags: ["+50% SIGN UP RATES", "A/B WIN"],
     },
     {
       title: "Brand Refresh + Motion",
-      img: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1600&auto=format&fit=crop",
+      img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
       tags: ["+50% SIGN UP RATES", "A/B WIN"],
     },
   ];

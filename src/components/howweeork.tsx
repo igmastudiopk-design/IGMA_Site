@@ -7,7 +7,7 @@ export default function HowWeWork() {
         <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
           <div>
             <h1 className="text-3xl font-bold leading-tight text-white lg:text-4xl">
-              Provide the best service with out of the box ideas
+              Out-of-the-box ideas. Proven digital results.
             </h1>
           </div>
 
@@ -25,6 +25,13 @@ export default function HowWeWork() {
           {/* 920 stats card */}
           <div className="relative w-full lg:col-span-3">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-slate-800 via-slate-900 to-black opacity-75 blur-xl" />
+            {/* Background image for stats card */}
+            <img
+              src="/main/ninetwenty.png"
+              alt="920+ Projects"
+              className="absolute inset-0 h-full w-full object-cover rounded-2xl opacity-30"
+              style={{ zIndex: 0 }}
+            />
             <div className="relative h-80 w-full overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800/60 to-slate-900/60 p-8 backdrop-blur-sm">
               <div className="flex items-baseline gap-1">
                 <span className="text-7xl font-bold text-white">920</span>
@@ -68,7 +75,7 @@ export default function HowWeWork() {
           {/* Video card */}
           <div className="relative h-80 w-full overflow-hidden rounded-2xl lg:col-span-7">
             <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop"
+              src="/main/howwork.jpg"
               alt="How We Work"
               className="h-full w-full object-cover"
             />
