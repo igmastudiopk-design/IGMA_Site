@@ -25,7 +25,7 @@ export default function Services() {
       </p>
 
       {/* Tabs */}
-      <div className="mt-15 flex justify-center gap-4">
+      <div className="mt-15 flex flex-col md:flex-row justify-center gap-4 items-center">
         {tabs.map((t) => {
           const isActive = active === t.key;
           return (

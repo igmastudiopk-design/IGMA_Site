@@ -18,7 +18,7 @@ export default function Services() {
       <h2 className="mt-1 text-center text-2xl font-semibold text-foreground">Services</h2>
 
       {/* Tabs */}
-      <div className="mt-6 flex justify-center gap-4">
+      <div className="mt-6 flex flex-col md:flex-row justify-center gap-4 items-center">
         {tabs.map((t) => (
           t.key === "content" ? (
             <Button
