@@ -36,8 +36,8 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="/book-call" label="Book a Call" variant="gradient" />
-            <Button href="/contact" label="Whatsapp" variant="outline" />
+            <Button href="/contact" label="Book a Call" variant="gradient" />
+            <Button href="https://wa.me/923715000280" label="Whatsapp" variant="outline" className="border-emerald-500" target="_blank" rel="noopener noreferrer" />
           </div>
 
         </div>

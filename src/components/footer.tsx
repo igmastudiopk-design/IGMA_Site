@@ -1,4 +1,3 @@
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,7 +5,6 @@ import Image from "next/image";
 export default function IGMAFooter() {
   return (
     <footer className="bg-[#0f0f0f] text-gray-300 overflow-hidden">
-      
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 py-12">
         <div className="flex flex-col lg:flex-row gap-10 justify-between">
 
@@ -36,49 +34,44 @@ export default function IGMAFooter() {
           </div>
 
           {/* Links */}
-          <div className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
             
             <div>
               <h4 className="mb-4 text-sm font-semibold text-gray-200">
                 Navigation
               </h4>
               <ul className="space-y-2 text-sm text-gray-400">
+                <li><Link href="/" className="hover:text-white">Home</Link></li>
                 <li><Link href="/portfolio" className="hover:text-white">Work</Link></li>
                 <li><Link href="/services" className="hover:text-white">Services</Link></li>
-                <li><Link href="/about" className="hover:text-white">Process</Link></li>
-                <li><Link href="/book-call" className="hover:text-white">Book a Call</Link></li>
+                <li><Link href="/about" className="hover:text-white">About</Link></li>
+                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
               </ul>
             </div>
 
-            <div>
-              <h4 className="mb-4 text-sm font-semibold text-gray-200">
-                Company
-              </h4>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link href="/resources" className="hover:text-white">Blog</Link></li>
-                <li><Link href="/about" className="hover:text-white">Careers</Link></li>
-                <li><Link href="/resources" className="hover:text-white">News</Link></li>
-              </ul>
-            </div>
-
+            {/* Contact only, company removed */}
             <div>
               <h4 className="mb-4 text-sm font-semibold text-gray-200">
                 Contact
               </h4>
               <ul className="space-y-2 text-sm text-gray-400 break-words">
                 <li>
-                  <a href="mailto:hello@example.com" className="hover:underline">
-                    hello@example.com
+                  <a
+                    href="https://wa.me/923715000280"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
+                    WhatsApp
                   </a>
                 </li>
                 <li>
                   <Link href="/contact" className="hover:text-white">
-                    WhatsApp
+                    Contact
                   </Link>
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
       </div>

@@ -1,10 +1,10 @@
 export default function TrustedBy() {
   const brands = [
     { name: "NVIDIA", logo: "https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg" },
-    { name: "Evernote", logo: "https://images.unsplash.com/photo-1587502537046-c70620057994?q=80&w=800&auto=format&fit=crop" },
+    { name: "Evernote", logo: "/evernote.svg" },
     { name: "Google", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
     { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
-    { name: "Coinbase", logo: "https://images.unsplash.com/photo-1640340434855-6f60b58902a6?q=80&w=800&auto=format&fit=crop" },
+    { name: "Coinbase", logo: "/coinbase.svg" },
     { name: "Tesla", logo: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg" },
   ];
 
@@ -24,8 +24,7 @@ export default function TrustedBy() {
         <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-10 bg-gradient-to-l from-black to-transparent" />
 
         {/* Marquee */}
-        <div className="flex w-max animate-marquee">
-          
+        <div className="flex w-max animate-marquee" style={{ animationDuration: '30s', animationTimingFunction: 'linear', animationIterationCount: 'infinite' }}>
           {[...Array(2)].map((_, setIndex) => (
             <div
               key={setIndex}
@@ -48,7 +47,6 @@ export default function TrustedBy() {
               ))}
             </div>
           ))}
-
         </div>
       </div>
     </section>

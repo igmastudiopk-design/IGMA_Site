@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Button from "@/components/button";
-import { FaVideo, FaCamera, FaFilm, FaTools } from "react-icons/fa";
+import { FaVideo, FaCamera, FaFilm, FaTools, FaBullhorn, FaChartLine, FaSearch, FaEnvelope } from "react-icons/fa";
 import type { IconType } from "react-icons";
 
 type TabKey = "content" | "marketing";
@@ -105,9 +105,46 @@ export default function Services() {
         </div>
 
         {/* Digital Marketing */}
-        <div data-section="marketing" className="hidden">
-          <div className="rounded-xl border border-white/10 bg-black/40 p-8 text-center text-white/80">
-            <p>Digital Marketing content coming soon.</p>
+        <div data-section="marketing" className="hidden grid grid-cols-1 gap-8 md:grid-cols-2">
+          {/* left image */}
+          <div className="rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Digital marketing analytics dashboard"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* right services grid without borders */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <ServiceCard
+              color="bg-emerald-500"
+              title="Social Media Management"
+              desc="Strategic content planning, community engagement, and brand growth across all platforms."
+              icon={FaBullhorn}
+            />
+            <ServiceCard
+              color="bg-blue-500"
+              title="Paid Advertising"
+              desc="ROI-focused campaigns on Meta, Google, TikTok with advanced targeting and optimization."
+              icon={FaChartLine}
+            />
+            <ServiceCard
+              color="bg-yellow-500"
+              title="SEO Optimization"
+              desc="Technical SEO, keyword strategy, and content optimization for higher search rankings."
+              icon={FaSearch}
+            />
+            <ServiceCard
+              color="bg-red-500"
+              title="Email Campaigns"
+              desc="Personalized email marketing that drives conversions and nurtures leads effectively."
+              icon={FaEnvelope}
+            />
           </div>
         </div>
       </div>
