@@ -27,10 +27,8 @@ export default function Services() {
             <Button
               key={t.key}
               label={t.label}
-              variant={isActive ? "gradient" : "outline"}
-              className={`px-5 py-2 text-sm font-medium ${
-                isActive ? "" : "border-emerald-500 bg-transparent hover:bg-white/10 text-white/90"
-              }`}
+              variant={isActive ? "gradient" : "outline-gradient"}
+              className={`px-5 py-2 text-sm font-medium`}
               onClick={() => setActive(t.key)}
             />
           );

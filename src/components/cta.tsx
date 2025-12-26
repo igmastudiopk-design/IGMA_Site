@@ -11,11 +11,11 @@ export default function CTA() {
           fill
           className="object-cover brightness-50"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 " />
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl px-6">
-        <div className="mx-auto w-full rounded-2xl bg-black/50 p-8 text-center backdrop-blur-md shadow-xl">
+        <div className="mx-auto w-full rounded-2xl p-8 text-center backdrop-blur-md shadow-xl">
           <h2 className="text-2xl font-bold md:text-3xl">Ready To Turn Attention Into Action?</h2>
           <p className="mt-2 text-xs md:text-sm text-white/80">
             BOOK A 20‑MINUTE DISCOVERY CALL. WE&apos;LL REVIEW GOALS, CONSTRAINTS, AND OUTLINE A PLAN.
