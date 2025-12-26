@@ -57,17 +57,17 @@ export default function TestimonialCarousel() {
   const current = testimonials[currentIndex];
 
   return (
-    <section className="w-full min-h-screen bg-[#070707] flex items-center justify-center px-2 py-12">
+    <section className="w-full min-h-screen bg-[#070707] flex items-center justify-center px-2 sm:px-4 md:px-6 lg:px-2 py-12">
       <div className="w-full max-w-5xl">
         {/* Card */}
         <div
-          className="relative rounded-[20px] px-12 py-10 flex items-center gap-10
+          className="relative rounded-[20px] px-6 sm:px-8 md:px-12 py-8 md:py-10 flex flex-col md:flex-row items-center gap-6 md:gap-10
           bg-[radial-gradient(120%_120%_at_0%_50%,#232b27_0%,#0e1f1a_60%,#1ba37a_100%)]
           shadow-[0_0_60px_rgba(32,200,150,0.10)]"
         >
           {/* Image */}
           <div className="flex-shrink-0">
-            <div className="w-48 h-48 rounded-[18px] overflow-hidden border border-emerald-500/30 bg-[#181f1c]">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-[18px] overflow-hidden border border-emerald-500/30 bg-[#181f1c]">
               <Image
                 src={current.image}
                 alt={current.author}
@@ -79,8 +79,8 @@ export default function TestimonialCarousel() {
           </div>
 
           {/* Content */}
-          <div className="flex-1 flex flex-col md:mt-6 justify-center">
-            <p className="text-white/80 text-base leading-relaxed max-w-3xl mb-6">
+          <div className="flex-1 flex flex-col md:mt-6 justify-center text-center md:text-left">
+            <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-3xl mb-4 sm:mb-6">
               {current.quote}
             </p>
             <div>
@@ -90,7 +90,7 @@ export default function TestimonialCarousel() {
               <p className="text-white/60 text-sm">{current.title}</p>
             </div>
             {/* Company */}
-            <div className="flex items-center gap-2 mt-3">
+            <div className="flex items-center gap-2 mt-3 justify-center md:justify-start">
               <div className="w-7 h-7 bg-white rounded-lg flex items-center justify-center">
                 {/* Discord SVG */}
                 <svg
@@ -107,7 +107,7 @@ export default function TestimonialCarousel() {
               </span>
             </div>
             {/* Dots & Arrows Centered */}
-            <div className="flex items-center justify-center gap-4 mt-8 w-full">
+            <div className="flex items-center justify-center gap-4 mt-6 sm:mt-8 w-full">
               <button
                 onClick={prev}
                 className="text-white/60 hover:text-white transition-colors rounded-full p-1.5 bg-transparent"
