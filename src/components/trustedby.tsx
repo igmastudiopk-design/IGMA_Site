@@ -25,7 +25,7 @@ export default function TrustedBy() {
 
         {/* Marquee */}
         <div className="flex w-max animate-marquee" style={{ animationDuration: '30s', animationTimingFunction: 'linear', animationIterationCount: 'infinite' }}>
-          {[...Array(2)].map((_, setIndex) => (
+          {[...Array(4)].map((_, setIndex) => (
             <div
               key={setIndex}
               className="flex flex-shrink-0 items-center gap-12 pr-12"
