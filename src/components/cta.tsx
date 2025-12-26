@@ -21,12 +21,14 @@ export default function CTA() {
             BOOK A 20‑MINUTE DISCOVERY CALL. WE&apos;LL REVIEW GOALS, CONSTRAINTS, AND OUTLINE A PLAN.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
-            <Button href="/book-call" label="Schedule a Call" variant="gradient" />
+            <Button href="https://wa.me/923715000280" label="Schedule a Call" variant="gradient" target="_blank" rel="noopener noreferrer" />
             <Button
-              href="/contact"
+              href="https://wa.me/923715000280"
               label="Chat on WhatsApp"
               variant="outline"
               className="bg-black/60 hover:bg-black/70"
+              target="_blank"
+              rel="noopener noreferrer"
             />
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 "use client";
 import Button from "@/components/button";
 import Link from "next/link";
@@ -53,33 +52,43 @@ export default function Navbar() {
           {/* Top bar */}
           <span
             className={`block w-7 h-1 rounded-full bg-white mb-1.5 transition-all duration-300 ease-in-out
-              ${menuOpen ? 'rotate-45 translate-y-2' : ''}
+              ${menuOpen ? "rotate-45 translate-y-2" : ""}
             `}
           ></span>
           {/* Middle bar */}
           <span
             className={`block w-7 h-1 rounded-full bg-white mb-1.5 transition-all duration-200 ease-in-out
-              ${menuOpen ? 'opacity-0' : ''}
+              ${menuOpen ? "opacity-0" : ""}
             `}
           ></span>
           {/* Bottom bar */}
           <span
             className={`block w-7 h-1 rounded-full bg-white transition-all duration-300 ease-in-out
-              ${menuOpen ? '-rotate-45 -translate-y-2' : ''}
+              ${menuOpen ? "-rotate-45 -translate-y-2" : ""}
             `}
           ></span>
         </button>
 
         {/* Button */}
         <div className="hidden md:flex items-center gap-3">
-          <Button label="Book a Call" href="/book-call" variant="gradient" />
+          <Button
+            label="Book a Call"
+            href="https://wa.me/923715000280"
+            variant="gradient"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
         </div>
       </div>
 
       {/* Mobile Dropdown Menu */}
       <div
         className={`md:hidden absolute top-20 left-0 w-full bg-black/90 z-40 flex flex-col items-center py-4 space-y-4 transition-all duration-300 ease-in-out
-          ${menuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'}
+          ${
+            menuOpen
+              ? "opacity-100 translate-y-0 pointer-events-auto"
+              : "opacity-0 -translate-y-4 pointer-events-none"
+          }
         `}
         style={{ borderTopLeftRadius: 18, borderTopRightRadius: 18 }}
       >
@@ -93,7 +102,15 @@ export default function Navbar() {
             {item.label}
           </Link>
         ))}
-        <Button label="Book a Call" href="/book-call" variant="gradient" className="w-11/12" onClick={() => setMenuOpen(false)} />
+        <Button
+          label="Book a Call"
+          href="https://wa.me/923715000280"
+          variant="gradient"
+          className="w-11/12"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setMenuOpen(false)}
+        />
       </div>
     </header>
   );
