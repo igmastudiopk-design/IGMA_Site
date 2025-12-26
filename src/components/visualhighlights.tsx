@@ -76,6 +76,15 @@ const items: Item[] = [
     heightClass: "h-[380px] md:h-[340px]",
   },
   {
+    id: "urban-photoshoot",
+    title: "Urban Photoshoot",
+    subtitle: "City Vibes",
+    src: "/visualhighlights/1 (9).png",
+    w: 800,
+    h: 900,
+    heightClass: "h-[320px] md:h-[400px]",
+  },
+  {
     id: "minimal-3",
     title: "Minimal Product Scene",
     subtitle: "Lighting and Composition",
@@ -90,7 +99,9 @@ export default function VisualHighlights() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-16 bg-[#0B0B0B]">
       <div className="max-w-2xl mb-8">
-        <h2 className="text-2xl font-semibold md:text-3xl text-white">Visual Highlights</h2>
+        <h2 className="text-2xl font-semibold md:text-3xl text-white">
+          Visual Highlights
+        </h2>
         <p className="mt-2 text-sm text-white/70">
           A glimpse into our latest productions and creative campaigns.
         </p>
@@ -142,7 +153,9 @@ export default function VisualHighlights() {
             {/* Card content */}
             <div className="absolute left-0 right-0 bottom-0 flex items-end justify-between px-5 pb-5 z-10">
               <div>
-                <h3 className="text-base font-semibold text-white">{item.title}</h3>
+                <h3 className="text-base font-semibold text-white">
+                  {item.title}
+                </h3>
                 <p className="text-xs text-gray-300">{item.subtitle}</p>
               </div>
               <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#22C55E] shadow-lg">
