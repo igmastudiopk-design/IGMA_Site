@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useState } from "react";
+import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Testimonial {
-  id: number
-  quote: string
-  author: string
-  title: string
-  company: string
-  image: string
+  id: number;
+  quote: string;
+  author: string;
+  title: string;
+  company: string;
+  image: string;
 }
 
 const testimonials: Testimonial[] = [
@@ -44,17 +44,17 @@ const testimonials: Testimonial[] = [
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
   },
-]
+];
 
 export default function TestimonialCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const prev = () =>
-    setCurrentIndex((i) => (i === 0 ? testimonials.length - 1 : i - 1))
+    setCurrentIndex((i) => (i === 0 ? testimonials.length - 1 : i - 1));
   const next = () =>
-    setCurrentIndex((i) => (i === testimonials.length - 1 ? 0 : i + 1))
+    setCurrentIndex((i) => (i === testimonials.length - 1 ? 0 : i + 1));
 
-  const current = testimonials[currentIndex]
+  const current = testimonials[currentIndex];
 
   return (
     <section className="w-full min-h-screen bg-[#070707] flex items-center justify-center px-2 py-12">
@@ -67,19 +67,19 @@ export default function TestimonialCarousel() {
         >
           {/* Image */}
           <div className="flex-shrink-0">
-            <div className="w-32 h-32 rounded-[18px] overflow-hidden border border-emerald-500/30 bg-[#181f1c]">
+            <div className="w-48 h-48 rounded-[18px] overflow-hidden border border-emerald-500/30 bg-[#181f1c]">
               <Image
                 src={current.image}
                 alt={current.author}
-                width={128}
-                height={128}
+                width={192}
+                height={192}
                 className="object-cover w-full h-full"
               />
             </div>
           </div>
 
           {/* Content */}
-          <div className="flex-1 flex flex-col justify-center">
+          <div className="flex-1 flex flex-col md:mt-6 justify-center">
             <p className="text-white/80 text-base leading-relaxed max-w-3xl mb-6">
               {current.quote}
             </p>
@@ -87,9 +87,7 @@ export default function TestimonialCarousel() {
               <h3 className="text-white font-semibold text-base">
                 {current.author}
               </h3>
-              <p className="text-white/60 text-sm">
-                {current.title}
-              </p>
+              <p className="text-white/60 text-sm">{current.title}</p>
             </div>
             {/* Company */}
             <div className="flex items-center gap-2 mt-3">
@@ -142,5 +140,5 @@ export default function TestimonialCarousel() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -90,7 +90,7 @@ export default function ContentSection() {
             ].map((card, index) => (
               <div
                 key={index}
-                className="flex h-full w-[380px] max-w-full flex-col text-left"
+                className="flex h-full w-[550px] max-w-full flex-col text-left"
               >
                 <div className="relative w-full aspect-[16/9] overflow-hidden rounded-xl">
                   <img

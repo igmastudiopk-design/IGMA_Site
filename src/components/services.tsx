@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Button from "@/components/button";
+import { useState } from "react";
 import { FaVideo, FaCamera, FaFilm, FaTools, FaBullhorn, FaChartLine, FaSearch, FaEnvelope } from "react-icons/fa";
 import type { IconType } from "react-icons";
 
@@ -11,6 +12,7 @@ export default function Services() {
     { key: "content", label: "Content Production" },
     { key: "marketing", label: "Digital Marketing" },
   ];
+  const [active, setActive] = useState<TabKey>("content");
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-16">
@@ -19,49 +21,27 @@ export default function Services() {
 
       {/* Tabs */}
       <div className="mt-6 flex flex-col md:flex-row justify-center gap-4 items-center">
-        {tabs.map((t) => (
-          t.key === "content" ? (
+        {tabs.map((t) => {
+          const isActive = active === t.key;
+          return (
             <Button
               key={t.key}
               label={t.label}
-              variant="gradient"
+              variant={isActive ? "gradient" : "outline"}
               rounded="rounded-full"
-              className="px-5 py-2 text-sm font-medium"
-              data-tab={t.key}
-              onClick={(e) => {
-                const target = (e.currentTarget as HTMLElement).dataset.tab as TabKey
-                const container = document.getElementById("services-content")
-                if (!container) return
-                container.querySelectorAll<HTMLElement>("[data-section]").forEach((el) => {
-                  el.classList.toggle("hidden", el.dataset.section !== target)
-                })
-              }}
+              className={`px-5 py-2 text-sm font-medium ${
+                isActive ? "" : "border-emerald-500 bg-transparent hover:bg-white/10 text-white/90"
+              }`}
+              onClick={() => setActive(t.key)}
             />
-          ) : (
-            <Button
-              key={t.key}
-              label={t.label}
-              variant="outline"
-              rounded="rounded-full"
-              className="border-emerald-500 bg-transparent hover:bg-white/10 px-5 py-2 text-sm font-medium text-white/90"
-              data-tab={t.key}
-              onClick={(e) => {
-                const target = (e.currentTarget as HTMLElement).dataset.tab as TabKey
-                const container = document.getElementById("services-content")
-                if (!container) return
-                container.querySelectorAll<HTMLElement>("[data-section]").forEach((el) => {
-                  el.classList.toggle("hidden", el.dataset.section !== target)
-                })
-              }}
-            />
-          )
-        ))}
+          );
+        })}
       </div>
 
       {/* Content */}
       <div id="services-content" className="mt-10">
         {/* Content Production */}
-        <div data-section="content" className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div data-section="content" className={`${active !== "content" ? "hidden" : ""} grid grid-cols-1 gap-8 md:grid-cols-2`}>
           {/* left image */}
           <div className="rounded-xl overflow-hidden">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
@@ -105,7 +85,7 @@ export default function Services() {
         </div>
 
         {/* Digital Marketing */}
-        <div data-section="marketing" className="hidden grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div data-section="marketing" className={`${active !== "marketing" ? "hidden" : ""} grid grid-cols-1 gap-8 md:grid-cols-2`}>
           {/* left image */}
           <div className="rounded-xl overflow-hidden">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
