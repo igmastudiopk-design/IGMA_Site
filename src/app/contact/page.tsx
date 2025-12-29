@@ -98,7 +98,7 @@ export default function ContactSection() {
             <div className="md:col-span-2">
               <Button
                 type="submit"
-                label="Send"
+                label="Send Message"
                 variant="gradient"
                 rounded="rounded-[19px]"
               />

@@ -71,13 +71,7 @@ export default function Navbar() {
 
         {/* Button */}
         <div className="hidden md:flex items-center gap-3">
-          <Button
-            label="Book a Call"
-            href="https://wa.me/923715000280"
-            variant="gradient"
-            target="_blank"
-            rel="noopener noreferrer"
-          />
+          <Button label="Contact Us" href="/contact" variant="gradient" />
         </div>
       </div>
 
@@ -103,12 +97,10 @@ export default function Navbar() {
           </Link>
         ))}
         <Button
-          label="Book a Call"
-          href="https://wa.me/923715000280"
+          label="Contact Us"
+          href="/contact"
           variant="gradient"
           className="w-11/12"
-          target="_blank"
-          rel="noopener noreferrer"
           onClick={() => setMenuOpen(false)}
         />
       </div>

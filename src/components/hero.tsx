@@ -31,8 +31,8 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <Button
-              href="https://wa.me/923715000280"
-              label="Book a Call"
+              href="/contact"
+              label="Contact Us"
               variant="gradient"
             />
             <Button
