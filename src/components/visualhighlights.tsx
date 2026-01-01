@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
+import Link from "next/link";
+import { portfolioData } from "@/data/index";
 
 type Item = {
   title: string;
@@ -9,93 +11,30 @@ type Item = {
   h: number;
   id: string;
   heightClass: string;
+  href: string;
 };
 
-const items: Item[] = [
-  {
-    id: "minimal-1",
-    title: "Minimal Product Scene",
-    subtitle: "Lighting and Composition",
-    src: "/visualhighlights/1 (1).jpg",
-    w: 800,
-    h: 1000,
-    heightClass: "h-[380px] md:h-[340px]",
-  },
-  {
-    id: "creative-direction",
-    title: "Creative Direction",
-    subtitle: "Editorial Portraits",
-    src: "/visualhighlights/1 (2).jpg",
-    w: 800,
-    h: 900,
-    heightClass: "h-[260px] md:h-[300px]",
-  },
-  {
-    id: "brand-campaign",
-    title: "Brand Campaign",
-    subtitle: "Billboards Placement",
-    src: "/visualhighlights/1 (3).jpg",
-    w: 800,
-    h: 900,
-    heightClass: "h-[320px] md:h-[400px]",
-  },
-  {
-    id: "web-design",
-    title: "Web Design",
-    subtitle: "High Fidelity Layout",
-    src: "/visualhighlights/1 (4).jpg",
-    w: 800,
-    h: 1000,
-    heightClass: "h-[400px] md:h-[360px]",
-  },
-  {
-    id: "social-content",
-    title: "Social Content",
-    subtitle: "Performance Creative",
-    src: "/visualhighlights/1 (5).jpg",
-    w: 800,
-    h: 900,
-    heightClass: "h-[260px] md:h-[300px]",
-  },
-  {
-    id: "bts-film-set",
-    title: "BTS–Film Set",
-    subtitle: "Production Day",
-    src: "/visualhighlights/1 (6).jpg",
-    w: 800,
-    h: 900,
-    heightClass: "h-[320px] md:h-[400px]",
-  },
-  {
-    id: "minimal-2",
-    title: "Minimal Product Scene",
-    subtitle: "Lighting and Composition",
-    src: "/visualhighlights/1 (7).jpg",
-    w: 800,
-    h: 900,
-    heightClass: "h-[380px] md:h-[340px]",
-  },
-  {
-    id: "urban-photoshoot",
-    title: "Urban Photoshoot",
-    subtitle: "City Vibes",
-    src: "/visualhighlights/1 (9).png",
-    w: 800,
-    h: 900,
-    heightClass: "h-[320px] md:h-[400px]",
-  },
-  {
-    id: "minimal-3",
-    title: "Minimal Product Scene",
-    subtitle: "Lighting and Composition",
-    src: "/visualhighlights/1 (8).jpg",
-    w: 800,
-    h: 900,
-    heightClass: "h-[260px] md:h-[300px]",
-  },
-];
-
 export default function VisualHighlights() {
+  const items: Item[] = portfolioData.map((category) => ({
+    id: category.id,
+    title: category.title,
+    subtitle: category.description,
+    src: `/portfolio/${category.id}/${category.images[0]}`,
+    w: 800,
+    h: 900,
+    heightClass:
+      category.id === "cafes"
+        ? "h-[380px] md:h-[340px]"
+        : category.id === "campaign"
+          ? "h-[260px] md:h-[300px]"
+          : category.id === "fashion"
+            ? "h-[320px] md:h-[400px]"
+            : category.id === "potraits"
+              ? "h-[400px] md:h-[360px]"
+              : "h-[260px] md:h-[300px]",
+    href: `/portfolio/${category.id}`,
+  }));
+
   return (
     <section className="mx-auto max-w-7xl px-6 py-16 bg-[#0B0B0B]">
       <div className="max-w-2xl mb-8">
@@ -116,8 +55,9 @@ export default function VisualHighlights() {
         "
       >
         {items.map((item) => (
-          <div
+          <Link
             key={item.id}
+            href={item.href}
             className={`
               mb-6
               break-inside-avoid
@@ -134,6 +74,7 @@ export default function VisualHighlights() {
               hover:scale-[1.05]
               hover:shadow-[0_8px_40px_0_rgba(34,197,94,0.12)]
               hover:brightness-110
+              block
             `}
             style={{ borderRadius: "16px" }}
           >
@@ -162,7 +103,7 @@ export default function VisualHighlights() {
                 <Check className="h-4 w-4 text-black" />
               </span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
